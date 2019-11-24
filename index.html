@@ -376,6 +376,8 @@
 </div>
 
 <!-- 加上这段代码原因： gitment在首页加载时, 如果找不到对应的控件会报错，此处加上，同时设置为none，防止报错 -->   
+  
+    <div id="comments-template" style="display:none"></div> 
 
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
@@ -500,9 +502,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/%E4%BF%A1%E4%BB%B0/" style="font-size: 11.03636726945736px;" class="tag-cloud-link">信仰</a>
+    <a href="/tags/%E4%BF%A1%E4%BB%B0/" style="font-size: 15.652589737461543px;" class="tag-cloud-link">信仰</a>
     
-    <a href="/tags/githubwiki%E5%9B%BE%E5%BA%8A/" style="font-size: 12.827991229457584px;" class="tag-cloud-link">githubwiki图床</a>
+    <a href="/tags/githubwiki%E5%9B%BE%E5%BA%8A/" style="font-size: 13.959630597894048px;" class="tag-cloud-link">githubwiki图床</a>
     
 </div>
                 
@@ -610,5 +612,27 @@
 <script src="/js/blog.js"></script>
 
 
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = ''
+      window.commentConfig.owner = 'ck200038'
+      window.commentConfig.repo = 'lupin111'
+      window.commentConfig.client_id = '40ce39b2a1ec07c590bf'
+      window.commentConfig.client_secret = '12ff48576b018f029a789055b3932608f9f50595'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: '',
+        owner: 'ck200038',
+        repo: 'lupin111',
+        client_id: '40ce39b2a1ec07c590bf',
+        client_secret: '12ff48576b018f029a789055b3932608f9f50595',
+        redirect_uri: ''
+      }
+    }
+</script>
+<script src="/js/comment/gitment.js"></script>
 
 </html>

@@ -203,7 +203,7 @@
     // 获取每页的页码数
     var pageSize = '10'
     var useLeancloud = ''
-    var useComment = ('false' === 'true')
+    var useComment = ('true' === 'true')
     $.getJSON('/content.json', function (json) {
       $('#search-breadcrumb').append(`搜索'${s}'的结果`)
       var result = getArticles(s, 'posts', json).concat(getArticles(s, 'pages', json))
@@ -227,7 +227,7 @@
       	var [month, day] = article.date.split('-')
         ''
         ''
-        var defaultPreview = '/imgs/preview/preview3.jpg'
+        var defaultPreview = '/imgs/preview/preview2.jpg'
         var preview = article.preview ? article.preview : defaultPreview
         var path = '/' + article.path
         resultList.append(`<div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
@@ -504,9 +504,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/%E4%BF%A1%E4%BB%B0/" style="font-size: 8.036526581266116px;" class="tag-cloud-link">信仰</a>
+    <a href="/tags/%E4%BF%A1%E4%BB%B0/" style="font-size: 10.020357011058554px;" class="tag-cloud-link">信仰</a>
     
-    <a href="/tags/githubwiki%E5%9B%BE%E5%BA%8A/" style="font-size: 18.468938353767072px;" class="tag-cloud-link">githubwiki图床</a>
+    <a href="/tags/githubwiki%E5%9B%BE%E5%BA%8A/" style="font-size: 15.244036628180126px;" class="tag-cloud-link">githubwiki图床</a>
     
 </div>
                 
@@ -614,5 +614,27 @@
 <script src="/js/blog.js"></script>
 
 
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Sun Nov 17 2019 22:53:47 GMT+0800'
+      window.commentConfig.owner = 'ck200038'
+      window.commentConfig.repo = 'lupin111'
+      window.commentConfig.client_id = '40ce39b2a1ec07c590bf'
+      window.commentConfig.client_secret = '12ff48576b018f029a789055b3932608f9f50595'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Sun Nov 17 2019 22:53:47 GMT+0800',
+        owner: 'ck200038',
+        repo: 'lupin111',
+        client_id: '40ce39b2a1ec07c590bf',
+        client_secret: '12ff48576b018f029a789055b3932608f9f50595',
+        redirect_uri: ''
+      }
+    }
+</script>
+<script src="/js/comment/gitment.js"></script>
 
 </html>
